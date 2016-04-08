@@ -2,7 +2,7 @@
   "name": "joi-sequelize",
   "version": "0.1.0",
   "scripts": {
-    "test": ""
+    "test": "gulp test"
   },
   "devDependencies": {},
   "dependencies": {
