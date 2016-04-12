@@ -1,14 +1,15 @@
 {
   "name": "joi-sequelize",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "test": "mocha test --recursive"
   },
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "chai": "^3.5.0",
-    "joi": "^8.0.5",
-    "lodash": "^4.9.0",
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "joi": "^8.0.5",
+    "lodash": "^4.9.0"
   }
 }
