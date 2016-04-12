@@ -15,14 +15,17 @@ describe('STRING', () => {
       JS.joi.should.have.deep.property('simple');
       JS.joi.simple.isJoi.should.be.ok;
     });
-    it('Should validate on string', ()=>{
+    it('Should validate as string', ()=>{
       JS.joi.simple._type.should.be.equal('string');
       JS.joi.simple.validate('aaaaa', (err)=> {
         expect(err).to.be.null;
       });
+      JS.joi.simple.validate(1, (err)=> {
+        expect(err).to.not.be.null;
+      });
     });
     it('Should validate allow null', () => {
-      JS.joi.with_length.validate(null, (err) => {
+      JS.joi.simple.validate(null, (err) => {
         expect(err).to.be.null;
       });
     });
@@ -31,7 +34,7 @@ describe('STRING', () => {
     });
   });
   describe('String with max length: STRING(length)', () => {
-    it('Should create joi schema', () => {
+    it('Should create joi schema with param', () => {
       JS.joi.should.have.deep.property('with_length');
       JS.joi.with_length.isJoi.should.be.ok;
     });
@@ -50,5 +53,4 @@ describe('STRING', () => {
       JS.joi.simple._description.should.be.an('string');
     });
   });
-
 });
