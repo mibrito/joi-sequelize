@@ -1,6 +1,5 @@
 'use strict'; // jshint ignore:line
 
-
 module.exports = function(model) {
   this.joi = {};
   this.model = model;
