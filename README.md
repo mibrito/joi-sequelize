@@ -1,6 +1,6 @@
 # joi-sequelize
 
-A lib to automaticaly create joi validation schemas from sequelize schemas.
+A lib to automaticaly create joi validation schemas from sequelize models.
 
 [![Build Status](https://travis-ci.org/mibrito/joi-sequelize.svg?branch=master)](https://travis-ci.org/mibrito/joi-sequelize)
 
