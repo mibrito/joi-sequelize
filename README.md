@@ -25,7 +25,7 @@ server.route({
   handler: (request, reply) => reply(request.payload),
   config:  {
     validate: {
-      payload: JS.joi
+      payload: JS.joi()
     }
   }
 });
@@ -34,4 +34,20 @@ server.start((err) => {
   if (err) throw err;
   console.log('Server running at:', server.info.uri);
 });
+```
+
+# Other functions
+
+## Omit
+
+Return a joi object with all items except the ones passed as arguments
+```javascript
+JS.omit('field1', 'field2', ...);
+```
+
+## Pick
+
+Return a joi object with all fields passed as arguments
+```javascript
+JS.pick('field1', 'field2', ...);
 ```

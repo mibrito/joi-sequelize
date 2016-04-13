@@ -16,10 +16,10 @@ describe('Initialization', () => {
     expect(JS).to.have.deep.property('joi');
   });
   it('should have a schema object',  () => {
-    expect(JS).to.have.deep.property('schema');
+    expect(JS).to.have.deep.property('_schema');
   });
   it('should assign model to respective internal object',  () => {
-    expect(JS).to.have.deep.property('model');
-    expect(JS.model).to.be.deep.equal(model);
+    expect(JS).to.have.deep.property('_model');
+    expect(JS._model).to.be.deep.equal(model);
   });
 });
