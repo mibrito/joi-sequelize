@@ -1,7 +1,7 @@
 'use strict'; // jshint ignore:line
 
 module.exports = (sequelize, DataTypes) => {
-  var Test = sequelize.define('Test', {
+  var String = sequelize.define('String', {
     simple: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -13,5 +13,5 @@ module.exports = (sequelize, DataTypes) => {
       description: 'String with max length'
     }
   });
-  return Test;
+  return String;
 };

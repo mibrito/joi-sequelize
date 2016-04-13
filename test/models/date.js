@@ -1,7 +1,7 @@
 'use strict'; // jshint ignore:line
 
 module.exports = (sequelize, DataTypes) => {
-  var Test = sequelize.define('Test', {
+  var Date = sequelize.define('Date', {
     simple: {
       type: DataTypes.DATE,
       allowNull: true,
@@ -25,5 +25,5 @@ module.exports = (sequelize, DataTypes) => {
       iso: true
     }
   });
-  return Test;
+  return Date;
 };

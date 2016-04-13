@@ -1,6 +1,6 @@
 'use strict'; // jshint ignore:line
 module.exports = (sequelize, DataTypes) => {
-  var Test = sequelize.define('Test', {
+  var Initializing = sequelize.define('Initializing', {
     string_tst: {
       type: DataTypes.STRING,
       allowNull: false
@@ -11,5 +11,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
 
-  return Test;
+  return Initializing;
 };

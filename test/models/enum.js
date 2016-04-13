@@ -1,7 +1,7 @@
 'use strict'; // jshint ignore:line
 
 module.exports = (sequelize, DataTypes) => {
-  var Test = sequelize.define('Test', {
+  var Enum = sequelize.define('Enum', {
     simple: {
       type: DataTypes.ENUM('type1', 'type2'),
       allowNull: true,
@@ -13,5 +13,5 @@ module.exports = (sequelize, DataTypes) => {
       description: 'Simple enum not null'
     }
   });
-  return Test;
+  return Enum;
 };
