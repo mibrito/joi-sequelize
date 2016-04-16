@@ -16,11 +16,18 @@ JoiSequelize.prototype.joi = function () {
 };
 JoiSequelize.prototype.omit = function () {
   if(!arguments.length) throw new Error('Omit must have params (arguments)');
-  return _.omit(this._joi, arguments);
+  if(arguments[0] instanceof Array) return _.omit(this._joi, arguments[0]);
+  else return _.omit(this._joi, arguments);
 };
 JoiSequelize.prototype.pick = function () {
   if(!arguments.length) throw new Error('Pick must have params (arguments)');
-  return _.pick(this._joi, arguments);
+  if(arguments[0] instanceof Array) return _.pick(this._joi, arguments[0]);
+  else return _.pick(this._joi, arguments);
+};
+JoiSequelize.prototype.include = function (o) {
+  if(!o || !(o instanceof Object) )
+    throw new Error('Pick must have params (arguments)');
+  return _.merge(this._joi, o);
 };
 
 module.exports = JoiSequelize;
