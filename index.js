@@ -4,6 +4,7 @@ let _ = require('lodash');
 let JoiSequelize = function(model) {
   this._joi = {};
   this._model = model;
+  this._types = {};
   this.sequelize = {
     define: require('./lib/define').bind(this)
   };
@@ -29,5 +30,9 @@ JoiSequelize.prototype.include = function (o) {
     throw new Error('Pick must have params (arguments)');
   return _.merge(this._joi, o);
 };
+JoiSequelize.prototype.types = function() {
+  return this._types;
+};
+
 
 module.exports = JoiSequelize;
