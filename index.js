@@ -33,6 +33,10 @@ JoiSequelize.prototype.include = function (o) {
 JoiSequelize.prototype.types = function() {
   return this._types;
 };
+JoiSequelize.prototype.setQueryType = function (key, type) {
+  this._types[key].query = type;
+  return this;
+}
 
 
 module.exports = JoiSequelize;
