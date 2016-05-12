@@ -23,11 +23,11 @@ describe('STRING', () => {
         expect(err).to.not.be.null;
       });
     });
-    // it('Should validate allow null', () => {
-    //   JS.joi().simple.validate(null, (err) => {
-    //     expect(err).to.be.null;
-    //   });
-    // });
+    it('Should validate allow null', () => {
+      JS.joi().simple.validate(null, (err) => {
+        expect(err).to.be.null;
+      });
+    });
     it('Should enable joi description', () => {
       JS.joi().simple._description.should.be.an('string');
     });
@@ -43,11 +43,11 @@ describe('STRING', () => {
         err.should.be.an('error');
       });
     });
-    // it('Should validate allow null', () => {
-    //   JS.joi().with_length.validate(null, (err) => {
-    //     expect(err).to.be.null;
-    //   });
-    // });
+    it('Should validate allow null', () => {
+      JS.joi().with_length.validate(null, (err) => {
+        expect(err).to.be.null;
+      });
+    });
     it('Should enable joi description', () => {
       JS.joi().simple._description.should.be.an('string');
     });

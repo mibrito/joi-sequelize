@@ -25,11 +25,11 @@ describe('DATE', () => {
         expect(err).to.be.null;
       });
     });
-    // it('Should validate allow null', () => {
-    //   JS.joi().simple.validate(null, (err) => {
-    //     expect(err).to.be.null;
-    //   });
-    // });
+    it('Should validate allow null', () => {
+      JS.joi().simple.validate(null, (err) => {
+        expect(err).to.be.null;
+      });
+    });
     it('Should validate with format YYYY/MM/DD', () => {
       JS.joi().with_format.validate('2016/04/12', (err) => {
         expect(err).to.be.null;

@@ -23,11 +23,11 @@ describe('ENUM', () => {
         expect(err).to.not.be.null;
       });
     });
-    // it('Should validate allow null', () => {
-    //   JS.joi().simple.validate(null, (err) => {
-    //     expect(err).to.be.null;
-    //   });
-    // });
+    it('Should validate allow null', () => {
+      JS.joi().simple.validate(null, (err) => {
+        expect(err).to.be.null;
+      });
+    });
     it('Should validate don\'t allow null', () => {
       JS.joi().simple_not_null.validate(null, (err) => {
         expect(err).to.not.be.null;
