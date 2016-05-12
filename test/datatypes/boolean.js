@@ -8,7 +8,6 @@ var model = require('../models/boolean');
 var JoiSequelize = require('../../');
 var JS = new JoiSequelize(model);
 
-
 describe('BOOLEAN', () => {
   describe('Simple use: BOOLEAN', () => {
     it('Should create joi schema', () => {
@@ -20,17 +19,17 @@ describe('BOOLEAN', () => {
       JS.joi().simple.validate(true, (err)=> {
         expect(err).to.be.null;
       });
-    })
-    it('Should sign error with wrong format', ()=>{
+    });
+    it('Should sign error with wrong format', ()=> {
       JS.joi().simple.validate('aaaa', (err)=> {
         expect(err).to.not.be.null;
       });
     });
-    it('Should validate allow null', () => {
-      JS.joi().simple.validate(null, (err) => {
-        expect(err).to.be.null;
-      });
-    });
+    // it('Should validate allow null', () => {
+    //   JS.joi().simple.validate(null, (err) => {
+    //     expect(err).to.be.null;
+    //   });
+    // });
     it('Should enable joi description', () => {
       JS.joi().simple._description.should.be.an('string');
     });
