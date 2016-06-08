@@ -8,7 +8,7 @@ A lots of Hapi projects uses Sequelize to handle database conection, data modeli
 
 # Usage
 
-## Model example
+### Model example
 
 ```javascript
 'use strict'; // jshint ignore:line
@@ -66,7 +66,7 @@ module.exports = function(sequelize, DataTypes) {
 };
 ```
 
-## Loading models
+### Loading models
 
 ```javascript
 'use strict';
@@ -133,7 +133,7 @@ module.exports = db || init();
 
 ```
 
-## Apply joi-sequelize generated schemas on routes
+### Apply joi-sequelize generated schemas on routes
 
 ```javascript
 'use strict';
@@ -165,21 +165,21 @@ server.start((err) => {
 
 # Other functions
 
-## Omit
+### Omit
 
 Return a joi object with all items except the ones passed as arguments
 ```javascript
 JS.User.omit('role', ...);
 ```
 
-## Pick
+### Pick
 
 Return a joi object with all fields passed as arguments
 ```javascript
 JS.User.pick('active', ...);
 ```
 
-## Include
+### Include
 
 Return a joi object with like JS.User.joi() but with field picture of joi type .any()
 ```javascript
