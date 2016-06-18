@@ -8,14 +8,13 @@ var model = require('../models/enum');
 var JoiSequelize = require('../../');
 var JS = new JoiSequelize(model);
 
-
 describe('ENUM', () => {
   describe('Simple use: ENUM(\'type1\', ...)', () => {
     it('Should create joi schema', () => {
       JS.joi().should.have.deep.property('simple');
       JS.joi().simple.isJoi.should.be.ok;
     });
-    it('Should validate as string with whitelist valid', ()=>{
+    it('Should validate as string with whitelist valid', ()=> {
       JS.joi().simple._type.should.be.equal('string');
       JS.joi().simple.validate('type1', (err)=> {
         expect(err).to.be.null;

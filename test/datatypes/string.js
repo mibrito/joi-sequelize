@@ -8,14 +8,13 @@ var model = require('../models/string');
 var JoiSequelize = require('../../');
 var JS = new JoiSequelize(model);
 
-
 describe('STRING', () => {
   describe('Simple use: STRING', () => {
     it('Should create joi schema', () => {
       JS.joi().should.have.deep.property('simple');
       JS.joi().simple.isJoi.should.be.ok;
     });
-    it('Should validate as string', ()=>{
+    it('Should validate as string', ()=> {
       JS.joi().simple._type.should.be.equal('string');
       JS.joi().simple.validate('aaaaa', (err)=> {
         expect(err).to.be.null;

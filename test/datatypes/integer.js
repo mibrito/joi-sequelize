@@ -8,7 +8,6 @@ var model = require('../models/integer');
 var JoiSequelize = require('../../');
 var JS = new JoiSequelize(model);
 
-
 describe('INTEGER', () => {
   describe('Very Simple use without object', () => {
     it('Should create joi schema', () => {

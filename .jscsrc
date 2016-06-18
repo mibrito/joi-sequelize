@@ -1,0 +1,8 @@
+{
+  "preset": "airbnb",
+  "excludeFiles": ["**/*.html"],
+  "requireCurlyBraces": false,
+  "requireTrailingComma": false,
+  "disallowMultipleVarDecl": false,
+  "requireCamelCaseOrUpperCaseIdentifiers": false
+}
