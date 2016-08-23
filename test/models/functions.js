@@ -5,6 +5,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    another_required_field: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     not_required_field: {
       type: DataTypes.INTEGER,
       allowNull: true

@@ -6,6 +6,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       allowNull: true,
       description: 'Simple integer'
+    },
+    simple_label: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      description: 'Simple integer',
+      label: 'complex'
     }
   });
   return Boolean;

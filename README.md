@@ -184,3 +184,21 @@ Return a joi object with like JS.User.joi() but with field picture of joi type .
 ```javascript
 JS.User.include({picture: joi.any()});
 ```
+
+### withRequired
+Get joi objects that have property `allowNull:false` as required
+```javascript
+JS.User.withRequired();
+```
+
+### withRequiredOmit
+Same as withRequired but omiting the fields passed as arguments
+```javascript
+JS.User.withRequiredOmit('id', 'created_at', 'updated_at', 'deleted_at'); // useful on create routes payloads
+```
+
+### withRequiredPick
+Same as withRequired but omiting the fields passed as arguments
+```javascript
+JS.User.withRequiredPick('id'); // useful on get, update, delete routes with id param
+```

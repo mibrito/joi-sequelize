@@ -33,5 +33,13 @@ describe('BOOLEAN', () => {
     it('Should enable joi description', () => {
       JS.joi().simple._description.should.be.an('string');
     });
+    it('Should enable joi label as column name', () => {
+      JS.joi().simple._settings.language.label.should.be.an('string');
+      JS.joi().simple._settings.language.label.should.be.equal('simple');
+    });
+    it('Should enable customize joi label', () => {
+      JS.joi().simple_label._settings.language.label.should.be.an('string');
+      JS.joi().simple_label._settings.language.label.should.be.equal('complex');
+    });
   });
 });
