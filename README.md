@@ -144,7 +144,6 @@ const JS = db.JS;
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
 
-const JS = new JoiSequelize(model);
 server.route({
   method:  'POST',
   path:    '/hello',
