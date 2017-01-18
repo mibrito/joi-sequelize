@@ -11,5 +11,10 @@
   "dependencies": {
     "joi": "^8.0.5",
     "lodash": "^4.9.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mibrito/joi-sequelize.git"
   }
 }
