@@ -1,6 +1,6 @@
 {
   "name": "joi-sequelize",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "scripts": {
     "test": "mocha test --recursive"
   },
