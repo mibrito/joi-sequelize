@@ -34,3 +34,6 @@ node_modules
 
 #jota TMP
 *~
+
+#vim
+*.swp
