@@ -9,7 +9,7 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "joi": "^10.4.1",
+    "joi": "^10.5.0",
     "lodash": "^4.9.0"
   },
   "license": "MIT",
